@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List - Página Principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="containerPrincipal">
+        <h1>SEJA BEM-VINDO A SUA LISTA DE TAREFAS</h1>
+        <br>
+        <a href="/cadastro" id="btnAddTarefa">NOVA TAREFA</a>
+        <br>
+        <div class="listaTarefa">
+            <% row.forEach((rows)=> { %>
+                <div class="containerTarefas">
+                    <input type="text" value="<%= rows.id %>" size="2" disabled id="inputId">
+                    <input type="text" id="inputDesc" value="<%= rows.description %>" disabled name="tarefa">
+                    <a id="editar" href="/editaCadastro/<%= rows.id %>">EDITAR</a>
+                    <a id="apagar" href="/deletaCadastro/<%= rows.id %>">APAGAR</a>
+                </div>
+                <hr>
+                <% }) %>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
