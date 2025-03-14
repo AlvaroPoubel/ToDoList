@@ -1,11 +1,11 @@
 import mysql from "mysql"
 
 const conection = mysql.createConnection({
-    host: 'localhost',
+    host: 'mysql.railway.internal',
     port: '3306',
     user: 'root',
-    password: 'root',
-    database: 'todolist'
+    password: 'OpzQfwWrWrVyfyOvZkjcpvAbvEgGbSpq',
+    database: 'railway'
 })
 
 conection.connect(); 
